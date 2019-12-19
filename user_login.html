@@ -1,9 +1,27 @@
 <!DOCTYPE HTML>
 <html>
+<script>
+function validasi() {
+var x = document.forms["form-login"]["username"].value;
+var y = document.forms["form-login"]["password"].value;
+if (x == "" && y == "") {
+alert("Username dan Password Kosong");
+}else if (x == ""){
+alert("Username tidak Boleh Kosong");
+}else if (y == ""){
+alert("Password tidak Boleh Kosong")
+}else if (x == "user@gmail.com"){
+location.replace("user_homeweb.html");
+}
+else{
+return true;
+}
+return false;
+}
+</script>
 <style media="screen">
 body {
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
-  /* background-image: url(bg1.jpeg); */
 }
 .logo{
   background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
@@ -16,8 +34,6 @@ body {
   font-size: 50px;
   border-radius: 5px;
   height: 72px;
-  /* width: 300px; */
-  /* border: 2px solid black; */
 }
 .login{
   margin: auto;
@@ -28,15 +44,12 @@ body {
   margin-top: 30px;
   font-size: 30px;
   border-radius: 6px;
-  /* margin-left: 500px */
-  /* color: white; */
 }
 .judul{
   background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   border: 2px solid grey;
   margin: auto;
   margin-top: -60px;
-  /* border: 2px solid black; */
   border-radius: 6px;
   width: 200px;
   height: 65px;
@@ -52,7 +65,6 @@ body {
 .w3-table,td{
   color: white;
   padding: 7px;
-   /* border: 2px solid black;  */
 }
 .w3-table td .tombol{
     padding: 6px;
@@ -69,7 +81,6 @@ body {
 <title>Login</title>
 </head>
 <body>
-<!-- <h1 class="logo">E-Learning</h1> -->
 <div class="logo">
   <img class="logo1" src="logo1.jpg" alt="" style="width:14%;
                                                    border-radius:5px;">
@@ -81,7 +92,7 @@ body {
 </div>
 
 <div class="login">
-  <form name="validasi"  action="homeweb.html" onsubmit="return validateForm()" method="post">
+  <form name="form-login"action="admin_homeweb.html" onsubmit="return validasi()" method="post">
 
   <table class="w3-table">
   <tr>
@@ -106,7 +117,8 @@ body {
 
   </td>
   <td>
-    <button class="tombol" type="button" name="button" onclick="window.location.href='lupa_password.html'">Lupa Password</button>
+    
+    <button class="tombol" type="button" name="button" onclick="window.location.href='user_lupa_password.html'">Lupa Password</button>
     <button class="tombol" type="submit" name="button">Masuk</button>
   </td>
 </tr>
@@ -114,20 +126,5 @@ body {
   </table>
 </form>
 </body>
-<script>
-function validateForm() {
-  var x = document.forms["validasi"]["username"].value;
-  var y = document.forms["validasi"]["password"].value;
-  if (x == "") {
-    alert("username kosong");
-  }else if (y == "") {
-    alert("password kosong");
-  }else if (x == "admin") {
-    location.replace("homewebadmin.html");
-  } else {
-    return true;
-  }
-  return false;
-}
-</script>
+
 </html>

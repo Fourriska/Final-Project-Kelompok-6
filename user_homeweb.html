@@ -48,9 +48,55 @@ ul a{
   /* margin-top: -110px; */
 
 }
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+  border-radius: 9px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btnn{
+  padding: 12px 10px 10px;
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  border: none;
+  border-radius: 6px;
+}
 </style>
 <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"
+
 </head>
 
 <body>
@@ -58,12 +104,64 @@ ul a{
   <img class="logo1" src="logo1.jpg" alt="" style="width:14%;
                                                    border-radius:5px;">
   <ul>
-    <a href="login.html">Logout</a>
-    <a href="E-Learning.html">Elearning</a>
-    <a href="pengumuman.html">Pengumuman</a>
-    <a href="Mapel.html">Mapel</a>
-    <a href="profil.html">Profil</a>
+    <a href="#" id="myBtn">Logout</a>
+    <a href="user_E-Learning.html">Elearning</a>
+    <a href="user_pengumuman.html">Pengumuman</a>
+    <a href="user_Mapel.html">Mapel</a>
+    <a href="user_profil.html">Profil</a>
   </ul>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p style="font-size:12px;">apakah anda yakin akan logout ?</p>
+      <center>
+      <button class="btnn" type="button" id="tidak" name="button">Tidak</button>
+      <button class="btnn" type="button" id="ya" name="button">Ya</button>
+      </center>
+    </div>
+
+  </div>
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  var btnya = document.getElementById("ya");
+  var btntdk = document.getElementById("tidak");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  //
+  btnya.onclick = function() {
+    location.replace("user_login.html");
+  }
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  btntdk.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 </div>
 <div style="margin-top:-50px;">
 <h3 style="text-align:center;">SMP 1 MERDEKA</h3>

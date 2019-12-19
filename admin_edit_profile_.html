@@ -3,7 +3,6 @@
 <style media="screen" >
 body {
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
-  /* background-image: url(bg1.jpeg); */
 }
 .logo{
   background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
@@ -16,8 +15,6 @@ body {
   font-size: 50px;
   border-radius: 5px;
   height: 72px;
-  /* width: 300px; */
-  /* border: 2px solid black; */
 }
 .login{
   margin: auto;
@@ -28,8 +25,6 @@ body {
   margin-top: 30px;
   font-size: 30px;
   border-radius: 6px;
-  /* margin-left: 500px */
-  /* color: white; */
 }
 ul{
   margin-top:-80px;
@@ -46,11 +41,7 @@ ul a{
   height: 5px;
   background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   border-radius: 5px;
-  /* margin:auto */
-  /* border: 2px solid #022e72; */
   color: #022e72;
-  /* margin-top: -110px; */
-
 }
 
 .profil{
@@ -68,22 +59,28 @@ ul a{
   color: #022e72;
 }
 
+.edit-button{
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 30px 100px 30px 100px;
+  background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-left: 250px;
+  position re
+}
+
+    
 .table{
   margin:auto;
   width:700px;
-  /* border: 2px solid black; */
 }
 table tr td{
-  /* text-decoration: none; */
-  /* background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
   font-family: 'Barlow', sans-serif;
   font-weight: bold;
   color: #022e72;
   text-align: center;
   margin-right:10px;
-  /* border:2px solid #022e72; */
-  /* border-radius:5px; */
-  /* padding: 200px: */
   width: 400px;
   height: 50px;
 }
@@ -107,11 +104,11 @@ table td .tombol{
   <img class="logo1" src="logo1.jpg" alt="" style="width:14%;
                                                    border-radius:5px;">
   <ul>
-    <a href="homeweb.html">Back</a>
-    <a href="E-Learning.html">Elearning</a>
-    <a href="pengumuman.html">Pengumuman</a>
-    <a href="Mapel.html">Mapel</a>
-    <a href="profil.html">Profil</a>
+    <a href="admin_homeweb.html">Back</a>
+    <a href="admin_E-Learning.html">Elearning</a>
+    <a href="admin_pengumuman.html">Pengumuman</a>
+    <a href="admin_mapel.html">Mapel</a>
+    <a href="admin_profil.html">Admin</a>
   </ul>
 </div>
 <div class= "profil">
@@ -119,26 +116,21 @@ table td .tombol{
     <table>
     <tr>
       <td>Username</td>
-      <!-- <td>:</td> -->
       <td>: <input type="text" name="Username"><br></td>
     </tr>
     <tr>
-      <td>NIS</td>
-      <!-- <td></td> -->
-      <td>: <input type="text" name="Nis"><br></td>
+      <td>NIP</td>
+      <td>: <input type="text" name="Nip"><br></td>
     </tr>
     <tr>
       <td>Password</td>
-      <!-- <td></td> -->
       <td>: <input type="text" name="Password"><br></td>
     </tr>
-    <tr>
-      <td></td>
-      <td><button class="tombol" type="button" name="button">Submit</button>
-          <button class="tombol" type="button" name="button">Edit</button>
-      </td>
-    </tr>
+  
+      
+
     </table>
+    <button class="edit-button" type="button" name="button" onclick="alert('password berhasil diubah'), window.location.href='admin_homeweb.html'">submit</button> 
 
   </form>
 <!-- <button type="button" name="button">Lupa Password</button> -->
